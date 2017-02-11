@@ -74,14 +74,14 @@ gulp.task('styles', () => {
  */
 gulp.task('scripts', () => {
     return browserify({ entries: path.jsDev, debug: true })
-        .transform('babelify', { presets: ["es2015"] })
+        .transform('babelify', { presets: ["es2015", "react"] })
         .bundle()
         .pipe(source('app.js'))
         .pipe(buffer())
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(jsOutput())
 		// .pipe(gutil.env.env === 'prod' ? uglify() : gutil.noop())
-        .pipe(sourcemaps.write('.'))
+        // .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./app/src'))
         .pipe(autoReload.stream());
 });
