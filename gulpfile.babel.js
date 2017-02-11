@@ -15,6 +15,7 @@ import buffer from 'vinyl-buffer';
 import uglify from 'gulp-uglify';
 import babelify from 'babelify';
 import browserSync from 'browser-sync';
+import gutil from 'gulp-util';
 
 // ------------------------------------------------ //
 
@@ -23,6 +24,7 @@ import browserSync from 'browser-sync';
 // create variables for the development and production path
 const dirs = {
     dev: './app/src',
+    prod: './app/build',
 }
 
 // create variables for sass dev and sass prod
@@ -34,6 +36,15 @@ const path = {
 // initialize the browser sync
 const autoReload = browserSync.create();
 
+// if the environment is 'prod', minify the css. if not set it as expanded
+const sassOutput = gutil.env.env === 'prod' ? 'compressed' : 'expanded';
+
+// if the environment is 'prod', minify the js. if not leave it as it is
+const jsOutput = gutil.env.env === 'prod' ? uglify() : gutil.noop();
+
+// if the environment is 'prod', use ./app/build or else use ./app/src path
+const destFolder = gutil.env.env === 'prod' ? dirs.prod : dirs.dev;
+
 // ------------------------------------------------ //
 
 /** @Desc - List of gulp tasks **/
@@ -44,10 +55,10 @@ const autoReload = browserSync.create();
 gulp.task('styles', () => {
     return gulp.src(path.sassDev) // search our scss entry file or the main scss file
         .pipe(sourcemaps.init()) // stat the source map process
-        .pipe(sass().on('error', sass.logError)) // compile our sass to css
+        .pipe(sass({outputStyle: sassOutput}).on('error', sass.logError))
         .pipe(autoprefixer()) // add auto-prefixer for browsers compatibility
         .pipe(sourcemaps.write('.')) // write our sourcemaps 
-        .pipe(gulp.dest('./app')) // export our compiled sass file and our sourcemap file to app folder
+        .pipe(gulp.dest(destFolder)) // export our compiled sass file and our sourcemap file to app folder
         .pipe(autoReload.stream());
 });
 
@@ -62,9 +73,9 @@ gulp.task('scripts', () => {
         .pipe(source('app.js'))
         .pipe(buffer())
         .pipe(sourcemaps.init())
-        .pipe(uglify())
+		.pipe(jsOutput)
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./app'))
+        .pipe(gulp.dest(destFolder))
         .pipe(autoReload.stream());
 });
 

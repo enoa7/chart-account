@@ -4,7 +4,12 @@
   "description": "Front-End Setup Tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve" : "gulp serve",
+    "styles" : "gulp styles",
+    "scripts" : "gulp scripts",
+    "serve-prod" : "gulp serve --env=prod",
+    "styles-prod" : "gulp styles --env=prod",
+    "scripts-prod" : "gulp scripts --env=prod"
   },
   "keywords": [
     "gulp",
@@ -31,6 +36,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
     "vinyl-buffer": "^1.0.0"
   },
   "dependencies": {
