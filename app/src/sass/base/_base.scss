@@ -1,0 +1,13 @@
+
+html,
+body {
+    height: 100%;
+    transition: .2s;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
