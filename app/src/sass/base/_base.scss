@@ -21,8 +21,8 @@ body,
 
 // remove margin top and bottom from all heading tag
 @for $i from 1 through 6 {
-    h#{$i} {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+	h#{$i} {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
