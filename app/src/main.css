@@ -10867,6 +10867,8 @@ ul.nodots li {
   -ms-flex-align: center;
   -moz-align-items: center;
   align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .side-navigation .sidenav-menu-list > i.fa {
@@ -10875,6 +10877,11 @@ ul.nodots li {
 
 .side-navigation .sidenav-menu-list > * {
   padding: 8px;
+}
+
+.side-navigation .sidenav-menu-list:hover {
+  background-color: #419aff;
+  color: #fff;
 }
 
 .side-navigation .sidenav-quickaccess {

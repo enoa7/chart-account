@@ -29,6 +29,8 @@
 .side-navigation .sidenav-menu-list {
     @include flexbox;
     @include align-items(center);
+    cursor: pointer;
+    border-radius: 5px;
 
     > i.fa {
         width: 40px;
@@ -36,6 +38,11 @@
 
     > * {
         padding: 8px;
+    }
+
+    &:hover {
+        background-color: $brand-primary;
+        color: #fff;
     }
 }
 
