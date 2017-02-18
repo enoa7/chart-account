@@ -1,0 +1,23 @@
+.side-navigation {
+    padding: 1em;
+    background: #eee;
+    border-right: 1px solid #ddd;
+    height: 100%;
+}
+
+.side-navigation header {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(flex-start);
+    @include spacepad(1em) > * {
+        @include spacepad-side(5px);
+        cursor: pointer;
+    }
+    > i:first-child {
+        flex-grow: 2;
+    }
+    > i:not(:first-child) {
+        flex-grow: 1;
+        text-align: right;
+    }
+}

@@ -1,13 +1,28 @@
+/** base site styling **/
+
+html,
+html > * {
+    font-family: 'Roboto', sans-serif;
+}
 
 html,
 body {
-    height: 100%;
     transition: .2s;
+    font-size: 16px;
 }
 
+html,
+body,
+#app,
+.page {
+    height: 100%;
+    min-height: 100%;
+}
+
+// remove margin top and bottom from all heading tag
 @for $i from 1 through 6 {
-	h#{$i} {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
+    h#{$i} {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }

@@ -1,7 +1,10 @@
-import react from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import Person from './component/Person.js';
+
+import App from './component/App.js';
+
+ReactDOM.render(<App />, $('#app')[0]);
 
 $(document).ready(function() {
 
@@ -9,15 +12,5 @@ $(document).ready(function() {
     $('.btn').on('click', (e) => {
         e.preventDefault();
     })
-
-
-    var Marcie = new Person('Marcie', 'yes');
-    $('#question').text(Marcie.displayQuestion());
-
-    setTimeout(() => {
-        $('#answer').text(Marcie.displayAnswer());
-    }, 5000);
-
-
 
 });
