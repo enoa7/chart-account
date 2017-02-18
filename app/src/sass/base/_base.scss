@@ -3,12 +3,18 @@
 html,
 html > * {
     font-family: 'Roboto', sans-serif;
+    color: #333;
 }
 
 html,
 body {
     transition: .2s;
     font-size: 16px;
+
+    // @media screen and (max-width: 992px) {
+    // 	font-size: 14px;
+    // }
+
 }
 
 html,
@@ -25,4 +31,8 @@ body,
 		margin-top: 0;
 		margin-bottom: 0;
 	}
+}
+// remove margin bottom default value
+p {
+	margin-bottom: 0;
 }

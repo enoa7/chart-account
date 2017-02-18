@@ -1,6 +1,6 @@
 .view-header {
     @include flexbox;
     @include align-items(center);
-    @include justify-content(space-around);
+    @include justify-content(space-between);
     padding: 16px;
 }

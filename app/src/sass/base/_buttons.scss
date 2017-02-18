@@ -1,0 +1,8 @@
+/** buttons and links **/
+
+a {
+	color: #333;
+	&:hover {
+		color: $brand-primary;
+	}
+}

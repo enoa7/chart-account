@@ -8,6 +8,7 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts";
 @import '../../../node_modules/font-awesome/scss/font-awesome';
 // import base
 @import 'base/base';
+@import 'base/buttons';
 
 // import utilities
 @import 'utilities/flex-mixin';

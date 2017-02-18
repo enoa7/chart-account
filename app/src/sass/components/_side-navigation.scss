@@ -12,12 +12,38 @@
     @include spacepad(1em) > * {
         @include spacepad-side(5px);
         cursor: pointer;
+        display: block;
     }
-    > i:first-child {
+    > *:first-child {
         flex-grow: 2;
     }
-    > i:not(:first-child) {
+    > *:not(:first-child) {
         flex-grow: 1;
         text-align: right;
+    }
+}
+
+.side-navigation .sidenav-menu {
+    @include spacepad(16px);
+}
+.side-navigation .sidenav-menu-list {
+    @include flexbox;
+    @include align-items(center);
+
+    > i.fa {
+        width: 40px;
+    }
+
+    > * {
+        padding: 8px;
+    }
+}
+
+.side-navigation .sidenav-quickaccess {
+    @include spacepad-side(8px);
+
+    li {
+        font-size: 1.1em;
+        @include spacepad(4px);
     }
 }

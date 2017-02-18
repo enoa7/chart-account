@@ -53,6 +53,11 @@ function jsOutput() {
     return output;
 }
 
+function onError(err) {
+  console.log(err);
+  this.emit('end');
+}
+
 // ------------------------------------------------ //
 /** @Desc - List of gulp tasks **/
 
@@ -76,9 +81,9 @@ gulp.task('styles', () => {
  */
 gulp.task('scripts', () => {
     return browserify({ entries: path.jsDev, debug: true })
+        .on('error', onError)
         .transform('babelify', { presets: ["es2015", "react"] })
         .bundle()
-        .pipe(plumber())
         .pipe(source('app.js'))
         .pipe(buffer())
         // .pipe(sourcemaps.init())

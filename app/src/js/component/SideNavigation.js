@@ -1,4 +1,7 @@
 import React from 'react';
+import SideNavHeader from './side-navigation/sidenav-header';
+import SideNavContent from './side-navigation/sidenav-content';
+import SideNavQuickAccess from './side-navigation/sidenav-quickaccess';
 
 export default class SideNavigation extends React.Component{
 	constructor() {
@@ -9,14 +12,10 @@ export default class SideNavigation extends React.Component{
 
 		return (
 
-			<div className="side-navigation col-xs-3 col-sm-2">
-				<header>
-					<i className="fa fa-empire fa-lg" aria-hidden="true"></i>
-					<i className="fa fa-question fa-lg" aria-hidden="true"></i>
-					<i className="fa fa-plus-circle fa-lg" aria-hidden="true"></i>
-					<i className="fa fa-bell fa-lg" aria-hidden="true"></i>
-				</header>
-				
+			<div className="side-navigation col-xs-3 col-md-2">
+				<SideNavHeader />
+				<SideNavContent />
+				<SideNavQuickAccess />
 			</div>
 
 		)

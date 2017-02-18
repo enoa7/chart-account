@@ -1,23 +1,30 @@
 @mixin spacepad-side($value) {
-	padding-left: $value;
-	padding-right: $value;
+    padding-left: $value;
+    padding-right: $value;
 }
 
 @mixin spacemar-side($value) {
-	padding-left: $value;
-	padding-right: $value;
+    padding-left: $value;
+    padding-right: $value;
 }
 
 @mixin spacepad($value) {
-	padding-top: $value;
-	padding-bottom: $value;
+    padding-top: $value;
+    padding-bottom: $value;
 }
 
 @mixin spacemar($value) {
-	padding-top: $value;
-	padding-bottom: $value;
+    padding-top: $value;
+    padding-bottom: $value;
 }
 
 .bold {
-	font-weight: 700;
+    font-weight: 700;
+}
+
+ul.nodots {
+    padding-left: 0;
+    li {
+        list-style-type: none !important;
+    }
 }

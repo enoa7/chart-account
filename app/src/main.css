@@ -10736,6 +10736,7 @@ button.close {
 html,
 html > * {
   font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
 html,
@@ -10783,8 +10784,29 @@ h6 {
   margin-bottom: 0;
 }
 
+p {
+  margin-bottom: 0;
+}
+
+/** buttons and links **/
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #419aff;
+}
+
 .bold {
   font-weight: 700;
+}
+
+ul.nodots {
+  padding-left: 0;
+}
+
+ul.nodots li {
+  list-style-type: none !important;
 }
 
 .side-navigation {
@@ -10815,19 +10837,55 @@ h6 {
   padding-left: 5px;
   padding-right: 5px;
   cursor: pointer;
+  display: block;
 }
 
-.side-navigation header > i:first-child {
+.side-navigation header > *:first-child {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
 }
 
-.side-navigation header > i:not(:first-child) {
+.side-navigation header > *:not(:first-child) {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: right;
+}
+
+.side-navigation .sidenav-menu {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.side-navigation .sidenav-menu-list {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.side-navigation .sidenav-menu-list > i.fa {
+  width: 40px;
+}
+
+.side-navigation .sidenav-menu-list > * {
+  padding: 8px;
+}
+
+.side-navigation .sidenav-quickaccess {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.side-navigation .sidenav-quickaccess li {
+  font-size: 1.1em;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .view-header {
@@ -10839,9 +10897,10 @@ h6 {
   -ms-flex-align: center;
   -moz-align-items: center;
   align-items: center;
-  -ms-flex-pack: distribute;
-  -moz-justify-content: space-around;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
   padding: 16px;
 }
 
