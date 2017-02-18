@@ -16,6 +16,7 @@ import uglify from 'gulp-uglify';
 import babelify from 'babelify';
 import browserSync from 'browser-sync';
 import gutil from 'gulp-util';
+import plumber from 'gulp-plumber';
 
 // ------------------------------------------------ //
 
@@ -60,6 +61,7 @@ function jsOutput() {
  */
 gulp.task('styles', () => {
     return gulp.src(path.sassDev) // search our scss entry file or the main scss file
+        .pipe(plumber())
         .pipe(sourcemaps.init()) // stat the source map process
         .pipe(sass({outputStyle: sassOutput}).on('error', sass.logError))
         .pipe(autoprefixer()) // add auto-prefixer for browsers compatibility
@@ -76,6 +78,7 @@ gulp.task('scripts', () => {
     return browserify({ entries: path.jsDev, debug: true })
         .transform('babelify', { presets: ["es2015", "react"] })
         .bundle()
+        .pipe(plumber())
         .pipe(source('app.js'))
         .pipe(buffer())
         // .pipe(sourcemaps.init())

@@ -1,7 +1,11 @@
-import react from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+
+import Header from './component/Header.js';
 import Person from './component/Person.js';
+
+ReactDOM.render(<Header/>, $('#header')[0]);
 
 $(document).ready(function() {
 
