@@ -4,8 +4,8 @@
 }
 
 @mixin spacemar-side($value) {
-    padding-left: $value;
-    padding-right: $value;
+    margin-left: $value;
+    margin-right: $value;
 }
 
 @mixin spacepad($value) {
@@ -27,4 +27,8 @@ ul.nodots {
     li {
         list-style-type: none !important;
     }
+}
+
+.border-divider {
+    border-top: 1px solid #ddd; 
 }

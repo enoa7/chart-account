@@ -1,6 +1,41 @@
+$height: 8;
 .view-header {
     @include flexbox;
     @include align-items(center);
     @include justify-content(space-between);
     padding: 16px;
 }
+
+.account-type-list {
+    @include flexbox;
+    @extend .border-divider;
+}
+
+.account-type-list ul {
+    padding: 0;
+    margin-bottom: 0;
+    @include flexbox;
+    @include align-items(center);
+    li {
+        cursor: pointer;
+        list-style-type: none !important;
+        padding: 8px 16px;
+        height: ($height * 4.75) + px;
+        &:hover {
+            border-bottom: 2px solid $brand-primary;
+        }
+    }
+}
+
+.search-box {
+    @include flexbox;
+    @include align-items(center);
+    padding: 8px 16px;
+    @extend .border-divider;
+    input {
+        padding: 4px;
+        @include spacemar-side(8px);
+        border: 0;
+    }
+}
+

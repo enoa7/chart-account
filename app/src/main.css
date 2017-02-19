@@ -10809,6 +10809,10 @@ ul.nodots li {
   list-style-type: none !important;
 }
 
+.border-divider, .account-type-list, .search-box {
+  border-top: 1px solid #ddd;
+}
+
 .side-navigation {
   padding: 1em;
   background: #eee;
@@ -10909,6 +10913,56 @@ ul.nodots li {
   -moz-justify-content: space-between;
   justify-content: space-between;
   padding: 16px;
+}
+
+.account-type-list {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.account-type-list ul {
+  padding: 0;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.account-type-list ul li {
+  cursor: pointer;
+  list-style-type: none !important;
+  padding: 8px 16px;
+  height: 38px;
+}
+
+.account-type-list ul li:hover {
+  border-bottom: 2px solid #419aff;
+}
+
+.search-box {
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.search-box input {
+  padding: 4px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
