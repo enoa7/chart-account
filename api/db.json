@@ -1,0 +1,24 @@
+{
+  "account" : [
+    {
+      "id": 80,
+      "name": "Account 1",
+      "desc": "this is account 1",
+      "type": "bank",
+      "total": 21403242124
+    }, {
+      "id": 81,
+      "name": "Account 2",
+      "desc": "this is account 2",
+      "type": "bank",
+      "total": 32315031505
+    }, {
+      "id": 82,
+      "name": "Account 3",
+      "desc": "this is account 3",
+      "type": "bank",
+      "total": 46928098414
+    }
+
+  ]
+}

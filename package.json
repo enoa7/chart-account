@@ -1,53 +1,55 @@
 {
-    "name": "fe-setup",
-    "version": "1.0.0",
-    "description": "Front-End Setup",
-    "main": "index.js",
-    "scripts": {
-        "serve": "gulp serve",
-        "styles": "gulp styles",
-        "scripts": "gulp scripts",
-        "serve-prod": "gulp serve --env=prod",
-        "styles-prod": "gulp styles --env=prod",
-        "scripts-prod": "gulp scripts --env=prod"
-    },
-    "keywords": [
-        "gulp",
-        "front-end",
-        "jquery",
-        "sass",
-        "es6",
-        "babel"
-    ],
-    "author": "Gamal Ardi",
-    "license": "ISC",
-    "devDependencies": {
-        "babel": "^6.5.2",
-        "babel-core": "^6.22.1",
-        "babel-preset-es2015": "^6.22.0",
-        "babel-preset-react": "^6.22.0",
-        "babelify": "^7.3.0",
-        "browser-sync": "^2.18.7",
-        "browserify": "^14.0.0",
-        "font-awesome": "^4.7.0",
-        "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^3.1.1",
-        "gulp-concat": "^2.6.1",
-        "gulp-cssnano": "^2.1.2",
-        "gulp-plumber": "^1.1.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0",
-        "gulp-sourcemaps": "^2.4.1",
-        "gulp-uglify": "^2.0.1",
-        "gulp-util": "^3.0.8",
-        "vinyl-buffer": "^1.0.0",
-        "vinyl-source-stream": "^1.1.0"
-    },
-    "dependencies": {
-        "babel-preset-react": "^6.22.0",
-        "bootstrap-sass": "^3.3.7",
-        "jquery": "^3.1.1",
-        "react": "^15.4.2",
-        "react-dom": "^15.4.2"
-    }
+  "name": "fe-setup",
+  "version": "1.0.0",
+  "description": "Front-End Setup",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gulp serve",
+    "styles": "gulp styles",
+    "scripts": "gulp scripts",
+    "jsonserver": "json-server --watch ./api/db.json",
+    "serve-prod": "gulp serve --env=prod",
+    "styles-prod": "gulp styles --env=prod",
+    "scripts-prod": "gulp scripts --env=prod"
+  },
+  "keywords": [
+    "gulp",
+    "front-end",
+    "jquery",
+    "sass",
+    "es6",
+    "babel"
+  ],
+  "author": "Gamal Ardi",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.15.3",
+    "babel": "^6.5.2",
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.7",
+    "browserify": "^14.0.0",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.22.0",
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.1.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
 }
