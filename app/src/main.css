@@ -10965,4 +10965,12 @@ ul.nodots li {
   border: 0;
 }
 
+#chart-account-lists .account-type {
+  text-transform: capitalize;
+}
+
+#chart-account-lists td {
+  vertical-align: middle;
+}
+
 /*# sourceMappingURL=main.css.map */
