@@ -1,0 +1,33 @@
+.account-form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $brand-primary;
+    @include transition(.2s);
+    &-wrapper {
+        max-width: 768px;
+        margin: 0 auto;
+        @include spacemar(2em);
+    }
+}
+
+.account-form header {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+    .btn-container {
+        > * {
+        	@include spacemar-side(8px);
+        }
+    }
+    .title {
+        color: #fff;
+    }
+}
+
+.account-form .content {
+	border-radius: 10px;
+	background-color: #fff;
+	@include spacemar(1em);
+	padding: 16px;
+}

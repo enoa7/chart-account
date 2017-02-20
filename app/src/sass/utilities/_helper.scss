@@ -14,8 +14,8 @@
 }
 
 @mixin spacemar($value) {
-    padding-top: $value;
-    padding-bottom: $value;
+    margin-top: $value;
+    margin-bottom: $value;
 }
 
 .bold {
