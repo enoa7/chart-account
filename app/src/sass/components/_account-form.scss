@@ -1,3 +1,11 @@
+/** generic form **/
+
+.form-group .sub-label {
+    font-size: 80%;
+    opacity: 0.8;
+    font-weight: 100;
+}
+
 .account-form {
     position: absolute;
     width: 100%;
@@ -17,7 +25,7 @@
     @include justify-content(space-between);
     .btn-container {
         > * {
-        	@include spacemar-side(8px);
+            @include spacemar-side(8px);
         }
     }
     .title {
@@ -26,8 +34,32 @@
 }
 
 .account-form .content {
-	border-radius: 10px;
-	background-color: #fff;
-	@include spacemar(1em);
-	padding: 16px;
+    border-radius: 10px;
+    background-color: #fff;
+    @include spacemar(1em);
+    padding: 16px;
+    form {
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(space-between);
+        @include flex-wrap(wrap);
+
+        > * {
+        	@include spacepad-side(1em);
+        }
+
+        // select only the first 2 child
+        > div:nth-child(-n+2) {
+        	flex-grow: 1;
+        }
+
+        // select all EXCEPT the first 2 child
+        > div:nth-child(n+3) {
+            flex-basis: 100%;
+        }
+
+        .form-group[data-form="status"] label {
+        	display: block;
+        }
+    }
 }

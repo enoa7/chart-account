@@ -14,25 +14,62 @@ export default class AccountForm extends React.Component {
 					</header>
 					<div className="content">
 						<form>
-						  <div className="form-group">
-						    <label for="exampleInputEmail1">Email address</label>
-						    <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Email" />
-						  </div>
-						  <div className="form-group">
-						    <label for="exampleInputPassword1">Password</label>
-						    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-						  </div>
-						  <div className="form-group">
-						    <label for="exampleInputFile">File input</label>
-						    <input type="file" id="exampleInputFile" />
-						    <p className="help-block">Example block-level help text here.</p>
-						  </div>
-						  <div className="checkbox">
-						    <label>
-						      <input type="checkbox" /> Check me out
-						    </label>
-						  </div>
-						  <button type="submit" className="btn btn-default">Submit</button>
+							<div className="form-group">
+							  <label htmlFor="acc-type">Account Type</label>
+							  <select className="form-control" id="acc-type">
+							  	<option>Select an account type</option>
+							    <option>Bank</option>
+							    <option>Loan</option>
+							    <option>Private</option>
+							    <option>Magic(?)</option>
+							  </select>
+							</div>
+							<div className="form-group">
+							  <label htmlFor="acc-category">Account Category</label>
+							  <select className="form-control" id="acc-category">
+							  	<option>Select an account category</option>
+							    <option>Category 1</option>
+							    <option>Category 2</option>
+							    <option>Category 3</option>
+							    <option>Category 4</option>
+							  </select>
+							</div>
+
+							<div className="form-group">
+							  <label htmlFor="acc-parent">Parent Account(optional)</label>
+							  <select className="form-control" id="acc-parent">
+							  	<option>Select parent account</option>
+							    <option>Parent 1</option>
+							    <option>Parent 2</option>
+							    <option>Parent 3</option>
+							    <option>Parent 4</option>
+							  </select>
+							</div>
+
+							<div className="form-group">
+							  <label htmlFor="acc-code">Code<p className="sub-label">A unique code/number for this account, up to 10 characters.</p></label>
+							  <input className="form-control" type="text" id="acc-code"/>
+							</div>
+
+							<div className="form-group">
+							  <label htmlFor="acc-name">Name<p className="sub-label">A short title for this account, up to 150 characters.</p></label>
+							  <input className="form-control" type="text" id="acc-name"/>
+							</div>
+
+							<div className="form-group">
+							  <label htmlFor="acc-desc">Description(optional)<p className="sub-label">A description of how this account should be used</p></label>
+							  <input className="form-control" type="text" id="acc-desc"/>
+							</div>
+
+							<div className="form-group" data-form="status">
+							  <label htmlFor="acc-status">Status<p className="sub-label">Set the status for this account</p></label>
+							 <label><input type="radio" name="radio-active" id="radio-active" />Active</label>
+							   <label><input type="radio" name="radio-inactive" id="radio-inactive" />Inactive</label>
+							</div>
+
+							<div className="form-group">
+						  		<button type="submit" className="btn btn-primary">Submit</button>
+						  	</div>
 						</form>
 					</div>
 				</div>

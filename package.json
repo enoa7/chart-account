@@ -1,7 +1,7 @@
 {
-  "name": "fe-setup",
+  "name": "weekendinc-fe-test-2",
   "version": "1.0.0",
-  "description": "Front-End Setup",
+  "description": "Weekend inc. Front End Test II",
   "main": "index.js",
   "scripts": {
     "serve": "gulp serve",
