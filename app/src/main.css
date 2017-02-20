@@ -10987,12 +10987,15 @@ ul.nodots li {
 }
 
 .account-form {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background: #419aff;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 .account-form-wrapper {
@@ -11002,7 +11005,7 @@ ul.nodots li {
   margin-bottom: 2em;
 }
 
-.account-form header {
+.account-form form .form-group.header {
   display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -11017,24 +11020,20 @@ ul.nodots li {
   justify-content: space-between;
 }
 
-.account-form header .btn-container > * {
+.account-form form .form-group.header .btn-container > * {
   margin-left: 8px;
   margin-right: 8px;
 }
 
-.account-form header .title {
+.account-form form .form-group.header .title {
   color: #fff;
 }
 
 .account-form .content {
-  border-radius: 10px;
-  background-color: #fff;
-  margin-top: 1em;
-  margin-bottom: 1em;
   padding: 16px;
 }
 
-.account-form .content form {
+.account-form .content .form-body {
   display: -webkit-box;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -11049,25 +11048,29 @@ ul.nodots li {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: #fff;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-.account-form .content form > * {
+.account-form .content .form-body > * {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-.account-form .content form > div:nth-child(-n+2) {
+.account-form .content .form-body > div:nth-child(-n+2) {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.account-form .content form > div:nth-child(n+3) {
+.account-form .content .form-body > div:nth-child(n+3) {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
 
-.account-form .content form .form-group[data-form="status"] label {
+.account-form .content .form-body .form-group[data-form="status"] label {
   display: block;
 }
 

@@ -1,30 +1,32 @@
 import React from 'react';
+import $ from 'jquery';
 
 export default class AccountList extends React.Component{
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			isHighlighted: false
+		}
 	}
 
-	// add prefix '0' on the ID
-	_procID() {
-		let accountID = this.props.id.toString();
-		return '0' + accountID;
-	}
-
-	// add dots on every 3 digits
-	_procTotal() {
-		let accountTotal = this.props.total.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
-		return accountTotal;
+	_activate(target) {
+		this.setState({ isHighlighted: !this.state.isHighlighted})
 	}
 
 	render() {
+
+		// add dots on every 3 digits
+		let _total = this.props.total.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
+		let _classes = '';
+		(this.state.isHighlighted) ? _classes += 'active' : null; 
 		return (
-			<tr>
+			<tr onClick={this._activate.bind(this)} className={_classes}>
 				<td>
 					<input type="checkbox" />
 				</td>
-				<td className="account-id">
-					{this._procID()}
+				<td className="account-code">
+					{this.props.code}
 				</td>
 				<td className="account-name">
 					<h4 className="bold">{this.props.name}</h4>
@@ -34,7 +36,8 @@ export default class AccountList extends React.Component{
 					{this.props.type}
 				</td>
 				<td className="account-total">
-					{this._procTotal()}
+					{/* this.props.total */}
+					{_total}
 				</td>
 			</tr>
 		)

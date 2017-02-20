@@ -7,7 +7,7 @@
     "serve": "./node_modules/.bin/gulp serve",
     "styles": "./node_modules/.bin/gulp styles",
     "scripts": "./node_modules/.bin/gulp scripts",
-    "jsonserver": "./node_modules/.bin/json-server --watch ./api/db.json",
+    "api": "./node_modules/.bin/json-server --watch ./api/db.json",
     "dev": "./node_modules/.bin/concurrently --kill-others \"npm run serve\" \"npm run jsonserver\" ",
     "serve-prod": "gulp serve --env=prod",
     "styles-prod": "gulp styles --env=prod",

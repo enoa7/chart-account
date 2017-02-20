@@ -7,11 +7,14 @@
 }
 
 .account-form {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background: $brand-primary;
     @include transition(.2s);
+    top: 0;
+    left: 0;
+    z-index: 999;
     &-wrapper {
         max-width: 768px;
         margin: 0 auto;
@@ -19,7 +22,7 @@
     }
 }
 
-.account-form header {
+.account-form form .form-group.header {
     @include flexbox;
     @include align-items(center);
     @include justify-content(space-between);
@@ -34,32 +37,28 @@
 }
 
 .account-form .content {
-    border-radius: 10px;
-    background-color: #fff;
-    @include spacemar(1em);
     padding: 16px;
-    form {
+    .form-body {
         @include flexbox;
         @include align-items(center);
         @include justify-content(space-between);
         @include flex-wrap(wrap);
-
+        border-radius: 10px;
+        background-color: #fff;
+        @include spacepad(1em);
         > * {
-        	@include spacepad-side(1em);
+            @include spacepad-side(1em);
         }
-
         // select only the first 2 child
         > div:nth-child(-n+2) {
-        	flex-grow: 1;
+            flex-grow: 1;
         }
-
         // select all EXCEPT the first 2 child
         > div:nth-child(n+3) {
             flex-basis: 100%;
         }
-
         .form-group[data-form="status"] label {
-        	display: block;
+            display: block;
         }
     }
 }
