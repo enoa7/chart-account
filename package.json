@@ -4,11 +4,11 @@
   "description": "Weekend inc. Front End Test II",
   "main": "index.js",
   "scripts": {
-    "serve": "gulp serve",
-    "styles": "gulp styles",
-    "scripts": "gulp scripts",
-    "jsonserver": "json-server --watch ./api/db.json",
-    "dev": "concurrently --kill-others \"npm run serve\" \"npm run jsonserver\" ",
+    "serve": "./node_modules/.bin/gulp serve",
+    "styles": "./node_modules/.bin/gulp styles",
+    "scripts": "./node_modules/.bin/gulp scripts",
+    "jsonserver": "./node_modules/.bin/json-server --watch ./api/db.json",
+    "dev": "./node_modules/.bin/concurrently --kill-others \"npm run serve\" \"npm run jsonserver\" ",
     "serve-prod": "gulp serve --env=prod",
     "styles-prod": "gulp styles --env=prod",
     "scripts-prod": "gulp scripts --env=prod"
@@ -44,6 +44,7 @@
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
+    "json-server": "^0.9.5",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
