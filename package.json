@@ -8,7 +8,7 @@
     "styles": "./node_modules/.bin/gulp styles",
     "scripts": "./node_modules/.bin/gulp scripts",
     "api": "./node_modules/.bin/json-server --watch ./api/db.json",
-    "dev": "./node_modules/.bin/concurrently --kill-others \"npm run serve\" \"npm run jsonserver\" ",
+    "dev": "./node_modules/.bin/concurrently --kill-others \"npm run serve\" \"npm run api\" ",
     "serve-prod": "gulp serve --env=prod",
     "styles-prod": "gulp styles --env=prod",
     "scripts-prod": "gulp scripts --env=prod"
