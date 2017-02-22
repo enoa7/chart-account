@@ -1,11 +1,15 @@
+// import dependencies
 import React from 'react';
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import axios from 'axios';
+
+// import components
 import MainViewHeader from './MainViewHeader';
 import ChartAccountType from './chart-account/ChartAccountType';
 import SearchAccount from './chart-account/SearchAccount';
-// import Account from './chart-account/Account';
 import AccountForm from './AccountForm';
 import AccountList from './chart-account/AccountList';
-import axios from 'axios';
+
 
 export default class MainView extends React.Component{
 	constructor() {
@@ -79,7 +83,7 @@ export default class MainView extends React.Component{
 				</header>
 				<ChartAccountType />
 				<SearchAccount />
-				<table className="table" id="chart-account-lists">
+				{/*<table className="table" id="chart-account-lists">
 					<thead>
 				      <tr>
 				      	<th><input type="checkbox" /></th>
@@ -92,7 +96,16 @@ export default class MainView extends React.Component{
 				    <tbody>
 				    	{this._getPosts()}
 				    </tbody>
-				</table>
+				</table> */}
+
+				<BootstrapTable data={this.state.posts} pagination>
+				  {/*<TableHeaderColumn isKey dataField='id'>Product ID</TableHeaderColumn> */}
+				  <TableHeaderColumn isKey dataField='code'dataAlign='center' width='90'>Code</TableHeaderColumn>
+				  <TableHeaderColumn dataField='name' width='150'>Name</TableHeaderColumn>
+				  <TableHeaderColumn dataField='type' width='150'>Type</TableHeaderColumn>
+				  <TableHeaderColumn dataField='total' width='150'>YTD</TableHeaderColumn>
+				</BootstrapTable>
+
 				{this.state.isModal ? <AccountForm isModal={this._displayModal.bind(this)} addPost={this._addPost.bind(this)} /> : null }
 			</div>
 		)

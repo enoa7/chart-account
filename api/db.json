@@ -45,11 +45,67 @@
     },
     {
       "id": 6,
-      "code": "",
-      "name": "",
-      "desc": "",
-      "type": "Select an account type",
-      "total": "-"
+      "code": "333",
+      "name": "daedaw",
+      "desc": "dwad",
+      "type": "Loan",
+      "total": "1534123"
+    },
+    {
+      "id": 7,
+      "code": "444",
+      "name": "daedaw",
+      "desc": "dwad",
+      "type": "Loan",
+      "total": "1534123"
+    },
+    {
+      "id": 8,
+      "code": "11523",
+      "name": "daedaw",
+      "desc": "dwad",
+      "type": "Loan",
+      "total": "1534123"
+    },
+    {
+      "id": 9,
+      "code": "134",
+      "name": "daedaw",
+      "desc": "dwad",
+      "type": "Loan",
+      "total": "1534123"
+    },
+    {
+      "id": 10,
+      "code": "546",
+      "name": "daedaw",
+      "desc": "dwad",
+      "type": "Loan",
+      "total": "1534123"
+    },
+    {
+      "id": 11,
+      "code": "767",
+      "name": "daedaw",
+      "desc": "dwad",
+      "type": "Loan",
+      "total": "1534123"
+    },
+    {
+      "id": 12,
+      "code": "23",
+      "name": "daedaw",
+      "desc": "dwad",
+      "type": "Loan",
+      "total": "1534123"
+    },
+    {
+      "id": 13,
+      "code": "999",
+      "name": "leonhart",
+      "desc": "leonhart",
+      "type": "Loan",
+      "total": "3526435"
     }
   ]
 }
