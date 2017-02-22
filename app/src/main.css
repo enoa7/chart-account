@@ -10962,6 +10962,7 @@ ul.nodots li {
   -moz-align-items: center;
   align-items: center;
   padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
 }
 
 .search-box input {
@@ -10977,6 +10978,19 @@ ul.nodots li {
 
 #chart-account-lists td {
   vertical-align: middle;
+}
+
+.react-bs-table .table > thead > tr > th,
+.react-bs-table .table > tbody > tr > td {
+  padding: 8px 0;
+}
+
+.react-bs-table table.table {
+  margin-bottom: 0;
+}
+
+.react-bs-table-pagination .dropdown {
+  display: none;
 }
 
 /** generic form **/

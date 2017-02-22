@@ -81,7 +81,7 @@ export default class AccountForm extends React.Component {
 
 								<div className="form-group">
 								  <label htmlFor="acc-total">Total</label>
-								  <input className="form-control" type="text" id="acc-total" ref={(input) => this._total = input}/>
+								  <input className="form-control" type="text" id="acc-total" ref={(input) => this._total = input} require/>
 								</div>
 
 								<div className="form-group" data-form="status">

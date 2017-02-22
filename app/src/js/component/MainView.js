@@ -10,6 +10,20 @@ import SearchAccount from './chart-account/SearchAccount';
 import AccountForm from './AccountForm';
 import AccountList from './chart-account/AccountList';
 
+class ActiveFormatter extends React.Component {
+  render() {
+    return (
+      <input type='checkbox' checked={ this.props.active }/>
+    );
+  }
+}
+
+function activeFormatter(cell, row) {
+  return (
+    <ActiveFormatter active={ cell } />
+  );
+}
+
 
 export default class MainView extends React.Component{
 	constructor() {
@@ -48,6 +62,8 @@ export default class MainView extends React.Component{
 		})
 	}
 
+
+
 	_addPost(name, type, code, desc, total) {
 
 		const account = {
@@ -83,27 +99,15 @@ export default class MainView extends React.Component{
 				</header>
 				<ChartAccountType />
 				<SearchAccount />
-				{/*<table className="table" id="chart-account-lists">
-					<thead>
-				      <tr>
-				      	<th><input type="checkbox" /></th>
-				      	<th>Code</th>
-				        <th>Name</th>
-				        <th>Type</th>
-				        <th>YTD</th>
-				      </tr>
-				    </thead>
-				    <tbody>
-				    	{this._getPosts()}
-				    </tbody>
-				</table> */}
 
-				<BootstrapTable data={this.state.posts} pagination>
+				<BootstrapTable data={this.state.posts}  bordered={ false } pagination>
 				  {/*<TableHeaderColumn isKey dataField='id'>Product ID</TableHeaderColumn> */}
-				  <TableHeaderColumn isKey dataField='code'dataAlign='center' width='90'>Code</TableHeaderColumn>
-				  <TableHeaderColumn dataField='name' width='150'>Name</TableHeaderColumn>
-				  <TableHeaderColumn dataField='type' width='150'>Type</TableHeaderColumn>
-				  <TableHeaderColumn dataField='total' width='150'>YTD</TableHeaderColumn>
+				  <TableHeaderColumn dataFormat={ activeFormatter } width='60px' dataAlign='center' >Active</TableHeaderColumn>
+				  <TableHeaderColumn isKey dataField='code' dataAlign='center' width='120px'>Code</TableHeaderColumn>
+				  <TableHeaderColumn dataField='name' width='120px'>Name </TableHeaderColumn>
+				  <TableHeaderColumn dataField='desc' width='120px'>Desc</TableHeaderColumn>
+				  <TableHeaderColumn dataField='type' width='120px'>Type</TableHeaderColumn>
+				  <TableHeaderColumn dataField='total' width='120px'>YTD</TableHeaderColumn>
 				</BootstrapTable>
 
 				{this.state.isModal ? <AccountForm isModal={this._displayModal.bind(this)} addPost={this._addPost.bind(this)} /> : null }
@@ -112,3 +116,5 @@ export default class MainView extends React.Component{
 		
 	}
 }
+
+

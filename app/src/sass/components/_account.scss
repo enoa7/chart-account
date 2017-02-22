@@ -1,9 +1,24 @@
 #chart-account-lists {
-	.account-type {
-		text-transform: capitalize;
-	}
+    .account-type {
+        text-transform: capitalize;
+    }
+    td {
+        vertical-align: middle;
+    }
+}
 
-	td {
-		vertical-align: middle;
-	}
+.react-bs-table {
+    .table > thead > tr > th,
+    .table > tbody > tr > td {
+        padding: 8px 0;
+    }
+    table.table {
+        margin-bottom: 0;
+    }
+}
+
+.react-bs-table-pagination {
+    .dropdown {
+        display: none;
+    }
 }
