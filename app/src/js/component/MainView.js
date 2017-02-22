@@ -24,6 +24,14 @@ function activeFormatter(cell, row) {
   );
 }
 
+function afterSearch(searchText, result) {
+  console.log('Your search text is ' + searchText);
+  console.log('Result is:');
+  for (let i = 0; i < result.length; i++) {
+    console.log('Fruit: ' + result[i].id + ', ' + result[i].name + ', ' + result[i].price);
+  }
+}
+
 
 export default class MainView extends React.Component{
 	constructor() {
@@ -90,6 +98,10 @@ export default class MainView extends React.Component{
 
 	render() {
 
+		const options = {
+		  afterSearch: afterSearch  // define a after search hook
+		};
+
 		return (
 			<div className="main-view col-xs-9 col-md-10">
 				<header className="view-header">
@@ -98,9 +110,9 @@ export default class MainView extends React.Component{
 					<a href="#" className="btn btn-primary btn-lg" onClick={this._displayModal.bind(this)}>New Account</a>	
 				</header>
 				<ChartAccountType />
-				<SearchAccount />
+				{/*<SearchAccount /> */}
 
-				<BootstrapTable data={this.state.posts}  bordered={ false } pagination>
+				<BootstrapTable data={this.state.posts} search={ true } bordered={ false } pagination>
 				  {/*<TableHeaderColumn isKey dataField='id'>Product ID</TableHeaderColumn> */}
 				  <TableHeaderColumn dataFormat={ activeFormatter } width='60px' dataAlign='center' >Active</TableHeaderColumn>
 				  <TableHeaderColumn isKey dataField='code' dataAlign='center' width='120px'>Code</TableHeaderColumn>

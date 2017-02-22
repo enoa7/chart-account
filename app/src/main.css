@@ -10989,6 +10989,30 @@ ul.nodots li {
   margin-bottom: 0;
 }
 
+.react-bs-table-tool-bar .row div:nth-child(1) .btn-group {
+  display: none;
+}
+
+.react-bs-table-tool-bar .row div:nth-child(2) {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.react-bs-table-tool-bar .row div:nth-child(2) .react-bs-table-search-form {
+  margin-bottom: 0;
+}
+
+.react-bs-table-tool-bar .row div:nth-child(2) input {
+  border: none;
+  box-shadow: none;
+  font-size: 1em;
+}
+
 .react-bs-table-pagination .dropdown {
   display: none;
 }
