@@ -6,7 +6,7 @@
 
 ## How To
 
-Once you've installed NodeJs, navigate to the project folder and do `npm install`.
+Once you've installed NodeJs, navigate to the project folder and do `npm install`. afterwards, run 'npm run dev'.
 
 ### List of command:
 
